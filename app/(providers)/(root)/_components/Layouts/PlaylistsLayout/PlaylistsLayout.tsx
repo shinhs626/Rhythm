@@ -23,21 +23,21 @@ function PlaylistsLayout({ playlists, title }: PlaylistsLayoutProps) {
           className="overflow-hidden"
         >
           {playlists.map((playlist) => (
-            <SwiperSlide key={playlist.id}>
-              <Link href={`/playlists/${playlist.id}`}>
-                {playlist.images.length === 0 ? (
+            <SwiperSlide key={playlist?.id}>
+              <Link href={`/playlists/${playlist?.id}`}>
+                {playlist?.images.length === 0 ? (
                   <div className="w-full aspect-square bg-slate-600 mb-1"></div>
                 ) : (
                   <div className="w-full aspect-square bg-slate-600 mb-1">
                     <img
-                      alt={playlist.name}
-                      src={playlist.images[0].url}
+                      alt={playlist?.name}
+                      src={playlist?.images[0]?.url}
                       className="w-full h-full object-cover"
                     />
                   </div>
                 )}
                 <p className="w-[calc(90%)] text-xl font-semibold line-clamp-1">
-                  {playlist.name}
+                  {playlist?.name}
                 </p>
               </Link>
             </SwiperSlide>
